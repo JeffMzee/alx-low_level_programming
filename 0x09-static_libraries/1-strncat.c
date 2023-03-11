@@ -1,10 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
+/**
+ * *_strncat - concats n bytes to strs
+ * @dest: *p
+ * @src: *p
+ * @n: n bytes
+ * Return: void
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
-    return strncat(dest, src, n);
+
+int dest_len, i;
+for (dest_len = 0; dest[dest_len] != '\0'; dest_len++)
+;
+
+for (i = 0; i < n && src[i] != '\0'; i++)
+	dest[dest_len + i] = src[i];
+
+/*should end with a end of string char*/
+dest[dest_len + i] = '\0';
+
+return (dest);
 }

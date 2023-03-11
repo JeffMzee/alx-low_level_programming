@@ -1,10 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
+/**
+ * _isalpha - check lower
+ * @c: char
+ * Return: bin
+ */
 
 int _isalpha(int c)
 {
-    return isalpha(c);
+	return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
+
 }

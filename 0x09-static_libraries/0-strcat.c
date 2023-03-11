@@ -1,10 +1,23 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
+/**
+ * *_strcat - concats strings
+ * @dest: *p -> (&dest)
+ * @src: *p -> (&src)
+ * Return: void
+*/
 
 char *_strcat(char *dest, char *src)
 {
-    return strcat(dest, src);
+int a = -1, i;
+for (i = 0; dest[i] != '\0'; i++)
+;
+
+do {
+	a++;
+	dest[i] = src[a];
+	i++;
+} while (src[a] != '\0');
+
+return (dest);
 }
