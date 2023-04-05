@@ -1,4 +1,4 @@
-#include "listings.h"
+#include "lists.h"
 
 /**
  * print_listint - print elements of linkedlist
@@ -9,14 +9,14 @@
 
 size_t print_listint(const listint_t *h)
 {
-	size_t nbr_nodes = 0;
-	const listint_t *current = h;
+	size_t count = 0;
 
-	while (current != NULL)
+	while (h)
 	{
-		printf("%i\n", current->n);
-		current = current->next;
-		nbr_nodes++;
+		printf("%d\n", h->n);
+		h = h->next;
+		count++;
 	}
-	return (nbr_nodes);
+
+	return (count);
 }
